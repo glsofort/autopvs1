@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2024-05-28
+- PVS1 levels
+    * HGNC gene symbol update to 20240401
 
 ## 2021-06-30
 - Major update: Compatible with hg19/GRCh37 and hg38/GRCh38
