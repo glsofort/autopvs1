@@ -38,6 +38,8 @@ def main():
         if len(records) == len(header):
             info = dict(zip(header, records))
         else:
+            print(f"lenrecords: {len(records)}; lenheader: {len(header)}")
+            print(f"records: {records}; header: {header}")
             raise Exception("Inconsistent length for line and header!")
 
         if genome_version == 'hg19':
