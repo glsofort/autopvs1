@@ -10,11 +10,11 @@ import random
 import string
 from collections import namedtuple
 
-from .pvs1 import PVS1
-from .cnv import PVS1CNV, CNVRecord
-from .read_data import trans_gene, gene_trans, gene_alias, vep_cache
-from .read_data import transcripts_hg19, transcripts_hg38, genome_hg19, genome_hg38
-from .utils import vep2vcfv2, vep2vcf, get_transcript, vep_consequence_trans, VCFRecord
+from pvs1 import PVS1
+from cnv import PVS1CNV, CNVRecord
+from read_data import trans_gene, gene_trans, gene_alias, vep_cache
+from read_data import transcripts_hg19, transcripts_hg38, genome_hg19, genome_hg38
+from utils import vep2vcfv2, vep2vcf, get_transcript, vep_consequence_trans, VCFRecord
 
 
 lof_type = ['frameshift', 'nonsense', 'splice-5', 'splice-3', 'init-loss']
