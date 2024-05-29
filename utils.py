@@ -59,6 +59,24 @@ def vep2vcf(vep_name, genome):
         alt = (complement + alt).replace('-', '')
     return VCFRecord(chrom.replace('chr', ''), pos, ref, alt)
 
+def vep2vcfv2(chrom, pos, ref, alt, genome):
+    """
+    convert bcftools +split-vep from vep vcf result to VCFRecord format
+    :param chrom:
+    :param pos:
+    :param ref:
+    :param alt:
+    :param genome:
+    :return: VCFRecord
+    """
+    pos = int(pos)
+    if ref == "-" or alt == "-":
+        pos = pos - 1
+        complement = genome[chrom][pos-1:pos].seq
+        ref = (complement + ref).replace('-', '')
+        alt = (complement + alt).replace('-', '')
+    return VCFRecord(chrom.replace('chr', ''), pos, ref, alt)
+
 
 def get_transcript(trans_name, transcripts):
     """
