@@ -5,11 +5,11 @@
 
 
 from collections import namedtuple
-from .strength import Strength
-from .utils import contained_in_bed
-from .read_data import pvs1_levels
-from .read_data import domain_hg19, hotspot_hg19, curated_region_hg19, exon_lof_popmax_hg19
-from .read_data import domain_hg38, hotspot_hg38, curated_region_hg38, exon_lof_popmax_hg38
+from strength import Strength
+from utils import contained_in_bed
+from read_data import pvs1_levels
+from read_data import domain_hg19, hotspot_hg19, curated_region_hg19, exon_lof_popmax_hg19
+from read_data import domain_hg38, hotspot_hg38, curated_region_hg38, exon_lof_popmax_hg38
 
 
 CNVRecord = namedtuple('CNVRecord', ('chrom', 'start', 'end', 'type'))
