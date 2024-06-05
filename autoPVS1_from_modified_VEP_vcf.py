@@ -51,7 +51,6 @@ def main():
         
         consequence = vep_consequence_trans(info['Consequence'])
         vcf_id = "-".join([vcfrecord.chrom, str(vcfrecord.pos), vcfrecord.ref, vcfrecord.alt])
-        print(transcript)
         
         if consequence in lof_type and transcript:
             lof_pvs1 = PVS1(vcfrecord, consequence, info['HGVSc'], info['HGVSp'], transcript, genome_version)
