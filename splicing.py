@@ -270,7 +270,7 @@ class Splicing:
                     maxentscore = 0
                 if splice_context[3:5] in ['GT', self.refseq[3:5]] and maxentscore > 1 and \
                         (maxentscore >= self.donor_threshold or
-                         maxentscore / refscore >= self.percent_threshold):
+                         (refscore != 0 and maxentscore / refscore >= self.percent_threshold)):
                     return pos, splice_context, maxentscore
 
             elif self.type == 'acceptor':
@@ -289,7 +289,7 @@ class Splicing:
                     maxentscore = 0
                 if splice_context[18:20] in ['AG', self.refseq[18:20]] and maxentscore > 1 and \
                         (maxentscore >= self.acceptor_threshold or
-                         maxentscore / refscore >= self.percent_threshold):
+                         (refscore != 0 and maxentscore / refscore >= self.percent_threshold)):
                     return pos, splice_context, maxentscore
         return 0, '', 0
 
