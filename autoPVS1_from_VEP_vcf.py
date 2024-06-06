@@ -144,7 +144,7 @@ def main():
     args = parser.parse_args()
     lof_type = ['frameshift', 'nonsense', 'splice-5', 'splice-3', 'init-loss']
     genome_version = args.genome_version
-    in_vcf = pysam.VariantFile(args.vep_vcf, threads=args.threads)
+    in_vcf = pysam.VariantFile(args.vep_vcf, threads=int(args.threads))
 
     csq_fields = in_vcf.header.info['CSQ'].description.replace("Consequence annotations from Ensembl VEP. Format: ", "").split("|")
     print ("vcf_id",'SYMBOL','Feature','trans_name','consequence', 'strength_raw', 'strength','criterion', sep="\t")
