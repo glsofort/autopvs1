@@ -1,11 +1,6 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 2024-06-06
-- Transcript structure update to UCSC ncbiRefSeq 
-    * hg19 ncbiRefSeq.txt.gz 20240212
-    * hg38 ncbiRefSeq.txt.gz 20240129
-
 ## 2024-05-28
 - PVS1 levels
     * HGNC gene symbol update to 20240401
