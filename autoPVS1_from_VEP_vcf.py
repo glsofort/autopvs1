@@ -185,6 +185,16 @@ def main():
                   'Unmet',
                   'na',
                   sep="\t")
+        elif not transcript:
+            print(vcf_id,
+                  info['SYMBOL'],
+                  info['Feature'],
+                  'not_transcript',
+                  consequence,
+                  'Unmet',
+                  'Unmet',
+                  'na',
+                  sep="\t")
         else:
             print(vcf_id,
                   info['SYMBOL'],
